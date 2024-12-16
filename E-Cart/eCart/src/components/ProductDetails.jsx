@@ -51,6 +51,7 @@ const ProductDetails = ({cart, setcart}) => {
 
   return (
     <>
+    <Navbar cart={cart} setdata={setdata}/>
     <ToastContainer
         position="top-right"
         autoClose={1500}

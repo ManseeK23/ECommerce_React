@@ -14,7 +14,7 @@ const Product = ({ items, cart, setcart }) => {
       imgSrc,
     };
     setcart([...cart, cartObject]);
-    toast.success('Item Added To Cart!', {
+    toast.success("Item Added To Cart!", {
       position: "top-right",
       autoClose: 1500,
       hideProgressBar: false,
@@ -23,8 +23,7 @@ const Product = ({ items, cart, setcart }) => {
       draggable: true,
       progress: undefined,
       theme: "dark",
-      });
-
+    });
   };
   return (
     <>
@@ -45,6 +44,7 @@ const Product = ({ items, cart, setcart }) => {
           {items.map((product) => {
             return (
               <>
+                <Navbar cart={cart} setdata={setdata} />
                 <div key={product.id} className="col-lg-4 col-md-6 my-3">
                   <div className="card" style={{ width: "18rem" }}>
                     <Link
